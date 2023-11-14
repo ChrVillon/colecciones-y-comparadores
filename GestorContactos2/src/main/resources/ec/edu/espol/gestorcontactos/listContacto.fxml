@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ec.edu.espol.controllers.ListContactoController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="47.0" prefWidth="280.0">
+         <children>
+            <Label prefHeight="23.0" prefWidth="214.0" text="Contactos">
+               <font>
+                  <Font name="Corbel Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ivNuevo" fitHeight="25.0" fitWidth="20.0" onMouseClicked="#nuevoContacto" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="2.0" right="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="ivOpciones" fitHeight="15.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <TabPane prefHeight="452.0" prefWidth="280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Contactos">
+            <content>
+                  <ScrollPane prefHeight="420.0" prefWidth="280.0">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="panelContactos" prefHeight="404.0" prefWidth="258.0" />
+                     </content></ScrollPane>
+            </content>
+          </Tab>
+            <Tab text="Favoritos">
+               <content>
+                  <ScrollPane prefHeight="420.0" prefWidth="280.0">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="panelFavoritos" prefHeight="404.0" prefWidth="258.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab text="Grupos">
+               <content>
+                  <ScrollPane prefHeight="420.0" prefWidth="280.0">
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                     <content>
+                        <VBox fx:id="panelGrupos" prefHeight="404.0" prefWidth="258.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
